@@ -35,7 +35,7 @@ var bcCmd = &cobra.Command{
 		}
 
 		if !list {
-			bugcrowd.GetScope(token, bbpOnly, pvtOnly, categories, urlsToo, concurrency)
+			bugcrowd.GetScope(token, bbpOnly, pvtOnly, categories, urlsToo, concurrency, list)
 		} else {
 			bugcrowd.ListPrograms(token, bbpOnly, pvtOnly)
 		}
