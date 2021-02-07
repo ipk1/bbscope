@@ -99,14 +99,14 @@ func PrintProgramScope(url string, token string, categories string, urlsToo bool
 				line       string
 				categories []string
 			}
-			currentTarget.line = scopeElement.Map()["name"].Str
+			currentTarget.line = scopeElement.Map()["bc-panel__title"].Str
 			if urlsToo {
 				currentTarget.line += " " + url
 			}
 
 			for _, x := range scopeElement.Map()["target"].Map() {
 				for _, y := range x.Array() {
-					currentTarget.categories = append(currentTarget.categories, y.Map()["name"].Str)
+					currentTarget.categories = append(currentTarget.categories, y.Map()["bc-panel__title"].Str)
 				}
 			}
 
