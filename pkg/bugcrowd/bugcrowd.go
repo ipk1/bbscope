@@ -88,7 +88,7 @@ func PrintProgramScope(url string, token string, categories string, urlsToo bool
 		log.Fatal(err)
 	}
 
-	doc.Find(".react-component-researcher-target-groups").Each(func(index int, s *goquery.Selection) {
+	doc.Find(".cc-rewards-link-table__endpoint").Each(func(index int, s *goquery.Selection) {
 		json, ok := s.Attr("data-react-props")
 		if !ok {
 			fmt.Printf("ERR")
